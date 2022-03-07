@@ -12,6 +12,29 @@
     <button onclick="sayHello()">Say hello</button>
 </body>
 
+<script>
+    Office.onReady((info) => {
+        // Check that we loaded into PowerPoint
+        if (info.host === Office.HostType.PowerPoint) {
+            document.getElementById("helloButton").onclick = sayHello;
+        }
+    });
+<script>
+    Office.onReady((info) => {
+        // Check that we loaded into PowerPoint
+        if (info.host === Office.HostType.PowerPoint) {
+            document.getElementById("helloButton").onclick = sayHello;
+        }
+    });
 
+    async function sayHello() {
+        const options = { coercionType: Office.CoercionType.Text };
+        await Office.context.document.setSelectedDataAsync(" ", options);
+        await Office.context.document.setSelectedDataAsync("Hola Mundo!", options);
+    }
+
+</script>
+
+</script>
 
 </html>
