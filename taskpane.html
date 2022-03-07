@@ -25,13 +25,14 @@
     async function sayHello() {
 
         // Set coercion type to text since 
-        const options = { coercionType: Office.CoercionType.Text };
+        //const options = { coercionType: Office.CoercionType.Text };
+        const options = { coercionType: Office.CoercionType.Html };
 
         // clear current selection
         //await Office.context.document.setSelectedDataAsync("HOLA MUNDO CRUEL ", options);
 
         // Set text in selection to 'Hello world!'
-        await Office.context.document.setSelectedDataAsync( "<embed src="https://pdiazq.github.io/AnalisisVulnerabilidad/" width="1000" height="900" />", {coercionType: Office.CoercionType.Html}, options);                                                       
+        await Office.context.document.setSelectedDataAsync( "<embed src="https://pdiazq.github.io/AnalisisVulnerabilidad/" width="1000" height="900" />", options);                                                       
     }
 
 </script>
