@@ -4,13 +4,20 @@
 
 <head>
     <!-- Office JavaScript API -->
+    <!-- https://syntagmatic.github.com/parallel-coordinates/ -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
 </head>
 
 <body>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
+      <script src="d3.parcoords.js"></script>
+      <script src="divgrid.js"></script>
+      <div id="example" class="parcoords"></div>
+      <div id="grid"></div>
+      <script id="brushing" embed src="./js/index.js" width="10" height="10" /></script>
     <p>This add-in will insert 'Hola Mundo!' in the current selection of the slide.</p>
     <button onclick="sayHello()">Hola Mundo</button>
-    <embed src="https://pdiazq.github.io/AnalisisVulnerabilidad/" width="1000" height="900" />
 </body>
 
 <script>
