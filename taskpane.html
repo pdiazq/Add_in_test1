@@ -26,13 +26,15 @@
 
         // Set coercion type to text since 
         //const options = { coercionType: Office.CoercionType.Text };
-        const options = { coercionType: Office.CoercionType.Html };
+        const options = { coercionType: Office.CoercionType.XmlSvg };
 
         // clear current selection
         //await Office.context.document.setSelectedDataAsync("HOLA MUNDO CRUEL ", options);
 
         // Set text in selection to 'Hello world!'
-        await Office.context.document.setSelectedDataAsync( "<embed src="https://pdiazq.github.io/AnalisisVulnerabilidad/" width="1000" height="900" />", options);                                                       
+        await Office.context.document.setSelectedDataAsync( "<svg width="100" height="100">
+  <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>" />", options);                                                       
     }
 
 </script>
