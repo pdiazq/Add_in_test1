@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    HOLA MUNDO
+    HOLA MUNDILLO
 </body>
 
 <script>
@@ -21,16 +21,16 @@
 
     async function sayHello() {
 
-        // Set coercion type to text since 
+        Set coercion type to text since 
         //const options = { coercionType: Office.CoercionType.Text };
         //const options = { coercionType: Office.CoercionType.XmlSvg };
-        const options = {coercionType: Office.CoercionType.Html};
+        //const options = {coercionType: Office.CoercionType.Html};
 
         // clear current selection
-        //await Office.context.document.setSelectedDataAsync("HOLA MUNDO CRUEL ", options);
+        await Office.context.document.setSelectedDataAsync("HOLA MUNDO CRUEL ", options);
 
         // Set text in selection to 'Hello world!'
-        await Office.context.document.setSelectedDataAsync( "<b>Hello</b> World!", options);                                                       
+        //await Office.context.document.setSelectedDataAsync( "<b>Hello</b> World!", options);                                                       
     }
 
 </script>
