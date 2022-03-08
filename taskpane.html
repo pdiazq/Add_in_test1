@@ -26,16 +26,14 @@
 
         // Set coercion type to text since 
         //const options = { coercionType: Office.CoercionType.Text };
-        const options = { coercionType: Office.CoercionType.XmlSvg };
+        //const options = { coercionType: Office.CoercionType.XmlSvg };
+        const options = {coercionType: Office.CoercionType.Html}
 
         // clear current selection
         //await Office.context.document.setSelectedDataAsync("HOLA MUNDO CRUEL ", options);
 
         // Set text in selection to 'Hello world!'
-        await Office.context.document.setSelectedDataAsync( "xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink">
-    <rect x="10" y="10" height="100" width="100"
-          style="stroke:#ff0000; fill: #0000ff"/>", options);                                                       
+        await Office.context.document.setSelectedDataAsync( "<b>Hello</b> World!", options);                                                       
     }
 
 </script>
